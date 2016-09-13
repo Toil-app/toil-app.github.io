@@ -1,14 +1,14 @@
 <template>
-  <div id="app">
+  <div id='app'>
 
-    <main class="wrapper">
-      <div class="content">
-        <div class="download-group">
-          <div class="label">
-            Mac OSX, Alpha 0.0.1
+    <main class='wrapper'>
+      <div class='content'>
+        <div class='download-group'>
+          <div class='label'>
+            Mac OSX, 0.0.3-alpha
           </div>
-          <form method="get" action="https://nuts-serve-agmjfnwipy.now.sh/download/latest">
-            <button type="submit" class="download" name="download">Download!</button>
+            <form method='get' action='https://download.thewilljustice.com/download/latest'>
+            <button type='submit' class='download' name='download'>Download!</button>
           </form>
         </div>
       </div>
@@ -21,15 +21,28 @@
 export default {
   data () {
     return {
-
+      latestVersion: ''
     }
   },
   methods: {},
-  created: function () {}
+  created: function () {
+    let url = 'https://download.thewilljustice.com'
+
+    // fetch(`${url}/api/versions`, {
+    //   mode: 'no-cors'
+    // })
+    // .then(response => {
+    //   console.log(response)
+    // })
+    // .catch(err => {
+    //   console.log('err', err)
+    // })
+
+  }
 }
 </script>
 
-<style lang="sass">
+<style lang='sass'>
   @import './scss/main.scss';
   $ultramarine: #6866FF;
   $background: #6866FF;
